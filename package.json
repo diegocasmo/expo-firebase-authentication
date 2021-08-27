@@ -1,5 +1,5 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "src/App.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -8,14 +8,23 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.2",
     "expo": "~42.0.1",
     "expo-status-bar": "~1.0.4",
+    "firebase": "8.2.3",
+    "formik": "^2.2.9",
+    "native-base": "^3.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-dotenv": "^3.2.0",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-svg": "12.1.1",
     "react-native-web": "~0.13.12",
-    "firebase": "8.2.3"
+    "styled-components": "^5.3.1",
+    "styled-system": "^5.1.5",
+    "yup": "^0.32.9",
+    "react-native-screens": "~3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
