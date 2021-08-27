@@ -6,3 +6,8 @@ Sample Expo application to showcase email and password based authentication usin
 
 - Install Expo CLI: `npm install --global expo-cli`
 - Install dependencies: `npm ci`
+- Copy the `.env.example` file and rename it to the `.env`
+  - `cp .env.example .env`
+- Add Firebase SDK configuration in the `.env` file
+
+
