@@ -4,11 +4,11 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NativeBaseProvider, Box } from 'native-base';
 
-const App = () => (
+const Root = () => (
   <NativeBaseProvider>
     <Box>Hello world</Box>
     <StatusBar style="auto" />
   </NativeBaseProvider>
 );
 
-registerRootComponent(App);
+registerRootComponent(Root);
