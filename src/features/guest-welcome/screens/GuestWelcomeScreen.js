@@ -13,7 +13,7 @@ export const GuestWelcomeScreen = ({ navigation }) => {
 
   return (
     <Center flex={1}>
-      <VStack space={4} alignItems="center">
+      <VStack space={4} alignItems="center" w="90%">
         <Center>
           <Button onPress={handlePressOnSignIn}>Sign in</Button>
         </Center>
