@@ -1,6 +1,6 @@
 # Expo Firebase Authentication
 
-Sample Expo application to showcase email and password based authentication using Firebase, with support for sign up, sign in, sign out, email verification, and password reset.
+Sample Expo application to showcase email and password based authentication using Firebase, with support for sign up, sign in, sign out, email verification, forgot password, and password reset.
 
 ## Installation
 
@@ -9,5 +9,3 @@ Sample Expo application to showcase email and password based authentication usin
 - Copy the `.env.example` file and rename it to the `.env`
   - `cp .env.example .env`
 - Add Firebase SDK configuration in the `.env` file
-
-
