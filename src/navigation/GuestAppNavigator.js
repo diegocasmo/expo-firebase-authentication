@@ -11,11 +11,7 @@ export const GuestAppNavigator = () => (
     <Stack.Screen
       name="GuestWelcome"
       component={GuestWelcomeScreen}
-      options={{
-        title: 'Welcome',
-        headerShown: false,
-        gestureEnabled: false,
-      }}
+      options={{ title: 'Welcome' }}
     />
     <Stack.Screen
       name="SignUp"

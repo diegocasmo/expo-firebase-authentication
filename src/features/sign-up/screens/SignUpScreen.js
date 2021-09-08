@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Center, VStack, Alert } from 'native-base'
-import { useSignUp } from '../hooks/useSignUp'
+import { useSignUp } from '../hooks/use-sign-up'
 import { EmailAndPasswordForm } from '../../../components/EmailAndPasswordForm'
 
 export const SignUpScreen = () => {
