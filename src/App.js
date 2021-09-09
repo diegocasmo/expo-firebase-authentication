@@ -10,7 +10,7 @@ export const App = () => {
 
   if (isLoading)
     return (
-      <Center flex={1} accessibilityLabel="Loading user profile">
+      <Center flex={1} accessibilityLabel="Loading user profile...">
         <Spinner />
       </Center>
     )

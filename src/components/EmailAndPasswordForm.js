@@ -77,7 +77,7 @@ export const EmailAndPasswordForm = ({
             autoCapitalize="none"
             secureTextEntry
             autoCorrect={false}
-            autoCompleteType="passwordConfirmation"
+            autoCompleteType="password"
             onBlur={handleBlur('passwordConfirmation')}
             onChange={handleChange('passwordConfirmation')}
             value={values.passwordConfirmation}
