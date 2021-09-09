@@ -2,7 +2,7 @@ import React from 'react'
 import { VStack, Center, Heading, Text, Button } from 'native-base'
 import { useReloadUser } from '../hooks/use-reload-user'
 import { useSendVerification } from '../hooks/use-send-verification'
-import { useSignOut } from '../hooks/use-sign-out'
+import { useSignOut } from '../../../hooks/use-sign-out'
 
 export const VerifyEmailScreen = () => {
   const [reloadUser, { isLoading: isReloadingUser }] = useReloadUser()

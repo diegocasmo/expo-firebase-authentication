@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { signOut } from '../../../api/user'
+import { signOut } from '../api/user'
 
 export const useSignOut = () => {
   const [state, setState] = useState({

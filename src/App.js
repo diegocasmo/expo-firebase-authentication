@@ -4,6 +4,7 @@ import { Center, Spinner } from 'native-base'
 import { useUserContext } from './context/UserContext'
 import { GuestAppNavigator } from './navigation/GuestAppNavigator'
 import { UnverifiedAppNavigator } from './navigation/UnverifiedAppNavigator'
+import { VerifiedAppNavigator } from './navigation/VerifiedAppNavigator'
 
 export const App = () => {
   const { user, isLoading } = useUserContext()
@@ -14,6 +15,8 @@ export const App = () => {
         <Spinner />
       </Center>
     )
+
+  if (user && user.emailVerified) return <VerifiedAppNavigator />
 
   if (user) return <UnverifiedAppNavigator />
 
