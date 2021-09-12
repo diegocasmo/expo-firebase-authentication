@@ -1,11 +1,11 @@
 import React from 'react'
 import { VStack, Center, Heading, Text, Button } from 'native-base'
-import { useReloadUser } from '../hooks/use-reload-user'
 import { useSendVerification } from '../hooks/use-send-verification'
+import { useUserContext } from '../../../context/UserContext'
 import { useSignOut } from '../../../hooks/use-sign-out'
 
 export const VerifyEmailScreen = () => {
-  const [reloadUser, { isLoading: isReloadingUser }] = useReloadUser()
+  const { reload: reloadUser, isLoading: isReloadingUser } = useUserContext()
   const [sendVerification, { isLoading: isResendingVerification }] =
     useSendVerification()
   const [signOut, { isLoading: isSigninOut }] = useSignOut()

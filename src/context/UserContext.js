@@ -1,19 +1,19 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { onAuthStateChanged } from '../api/user'
+import { onAuthStateChanged, reload, getUser } from '../api/user'
 
 const UserContext = createContext()
 
 export const UserContextProvider = ({
   children,
-  initialState = { user: null, isLoading: true },
+  initialState = { user: null, isLoading: true, error: null },
 }) => {
   const [state, setState] = useState(initialState)
 
   // Listen to Firebase authentication state changes
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged((firebaseUser) => {
-      setState({ user: firebaseUser, isLoading: false })
+    const unsubscribe = onAuthStateChanged((user) => {
+      setState({ user, isLoading: false, error: null })
     })
 
     return () => {
@@ -21,7 +21,22 @@ export const UserContextProvider = ({
     }
   }, [])
 
-  return <UserContext.Provider value={state}>{children}</UserContext.Provider>
+  const handleReload = async () => {
+    try {
+      await reload()
+      const user = getUser()
+      setState({ user, isLoading: false, error: null })
+    } catch (error) {
+      setState({ user: null, isLoading: false, error })
+    }
+  }
+
+  const value = {
+    ...state,
+    reload: handleReload,
+  }
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
 
 UserContextProvider.propTypes = {

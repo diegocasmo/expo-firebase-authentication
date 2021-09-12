@@ -1,13 +1,23 @@
 import React from 'react'
 
-import { Center, Spinner } from 'native-base'
+import { Center, Spinner, Alert } from 'native-base'
 import { useUserContext } from './context/UserContext'
 import { GuestAppNavigator } from './navigation/GuestAppNavigator'
 import { UnverifiedAppNavigator } from './navigation/UnverifiedAppNavigator'
 import { VerifiedAppNavigator } from './navigation/VerifiedAppNavigator'
 
 export const App = () => {
-  const { user, isLoading } = useUserContext()
+  const { user, isLoading, error } = useUserContext()
+
+  if (error)
+    return (
+      <Center flex={1}>
+        <Alert status="error">
+          <Alert.Icon />
+          <Alert.Title>{error.message}</Alert.Title>
+        </Alert>
+      </Center>
+    )
 
   if (isLoading)
     return (
