@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Center, Spinner, Alert } from 'native-base'
+import { Center, Spinner } from 'native-base'
+import { ErrorMessage } from './components/ErrorMessage'
 import { useUserContext } from './context/UserContext'
 import { GuestAppNavigator } from './navigation/GuestAppNavigator'
 import { UnverifiedAppNavigator } from './navigation/UnverifiedAppNavigator'
@@ -12,10 +13,7 @@ export const App = () => {
   if (error)
     return (
       <Center flex={1}>
-        <Alert status="error">
-          <Alert.Icon />
-          <Alert.Title>{error.message}</Alert.Title>
-        </Alert>
+        <ErrorMessage error={error} />
       </Center>
     )
 

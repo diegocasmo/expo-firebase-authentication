@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Center, VStack, Alert } from 'native-base'
+import { Center, VStack } from 'native-base'
 import { useSignUp } from '../hooks/use-sign-up'
+import { ErrorMessage } from '../../../components/ErrorMessage'
 import { EmailAndPasswordForm } from '../../../components/EmailAndPasswordForm'
 
 export const SignUpScreen = () => {
@@ -10,12 +11,7 @@ export const SignUpScreen = () => {
   return (
     <Center flex={1}>
       <VStack space={4} alignItems="center" w="90%">
-        {error && (
-          <Alert status="error">
-            <Alert.Icon />
-            <Alert.Title>{error.message}</Alert.Title>
-          </Alert>
-        )}
+        <ErrorMessage error={error} />
         <EmailAndPasswordForm
           onSubmit={signUp}
           isLoading={isLoading}
