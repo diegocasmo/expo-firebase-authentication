@@ -17,6 +17,7 @@ const buildValidationSchema = (withPasswordConfirmation) =>
   })
 
 export const EmailAndPasswordForm = ({
+  buttonText = 'Create account',
   isLoading,
   onSubmit,
   withPasswordConfirmation = false,
@@ -86,13 +87,14 @@ export const EmailAndPasswordForm = ({
       )}
 
       <Button onPress={handleSubmit} isLoading={isLoading}>
-        Create account
+        {buttonText}
       </Button>
     </VStack>
   )
 }
 
 EmailAndPasswordForm.propTypes = {
+  buttonText: PropTypes.string,
   isLoading: PropTypes.bool.isRequired,
   onSubmit: PropTypes.func.isRequired,
   withPasswordConfirmation: PropTypes.bool,

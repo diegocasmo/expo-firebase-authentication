@@ -9,6 +9,9 @@ export const signUp = async ({ email = '', password = '' }) => {
   sendVerification()
 }
 
+export const signIn = ({ email = '', password = '' }) =>
+  firebase.auth().signInWithEmailAndPassword(email, password)
+
 export const sendVerification = () =>
   firebase.auth().currentUser.sendEmailVerification()
 
