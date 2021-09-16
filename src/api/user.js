@@ -19,3 +19,11 @@ export const sendVerification = () => getUser().sendEmailVerification()
 export const signOut = () => firebase.auth().signOut()
 
 export const reload = () => getUser().reload()
+
+export const reauthenticate = ({ email = '', password = '' }) =>
+  getUser().reauthenticateWithCredential(
+    firebase.auth.EmailAuthProvider.credential(email, password)
+  )
+
+export const updatePassword = ({ password = '' }) =>
+  getUser().updatePassword(password)
