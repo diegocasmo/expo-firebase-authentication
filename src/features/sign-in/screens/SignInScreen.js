@@ -1,12 +1,16 @@
 import React from 'react'
-
-import { Center, VStack } from 'native-base'
+import PropTypes from 'prop-types'
+import { Center, VStack, Button } from 'native-base'
 import { useSignIn } from '../hooks/use-sign-in'
 import { ErrorMessage } from '../../../components/ErrorMessage'
 import { EmailAndPasswordForm } from '../../../components/EmailAndPasswordForm'
 
-export const SignInScreen = () => {
+export const SignInScreen = ({ navigation }) => {
   const [signIn, { isLoading, error }] = useSignIn()
+
+  const handlePressOnForgotPassword = () => {
+    navigation.navigate('ForgotPassword')
+  }
 
   return (
     <Center flex={1}>
@@ -17,7 +21,12 @@ export const SignInScreen = () => {
           isLoading={isLoading}
           buttonText="Sign in"
         />
+        <Button onPress={handlePressOnForgotPassword}>Forgot password</Button>
       </VStack>
     </Center>
   )
+}
+
+SignInScreen.propTypes = {
+  navigation: PropTypes.object.isRequired,
 }

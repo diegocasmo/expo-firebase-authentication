@@ -27,3 +27,6 @@ export const reauthenticate = ({ email = '', password = '' }) =>
 
 export const updatePassword = ({ password = '' }) =>
   getUser().updatePassword(password)
+
+export const sendPasswordReset = ({ email = '' }) =>
+  firebase.auth().sendPasswordResetEmail(email)
