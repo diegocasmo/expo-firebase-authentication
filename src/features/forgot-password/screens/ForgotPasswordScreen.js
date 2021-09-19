@@ -21,8 +21,8 @@ export const ForgotPasswordScreen = ({ navigation }) => {
     <Center flex={1}>
       <VStack space={4} alignItems="center" w="90%">
         <Text>
-          Please enter your email address. You will receive link to create a new
-          password via email.
+          Please, enter your email address. You will receive link to create a
+          new password via email.
         </Text>
         <ErrorMessage error={error} />
         <EmailForm onSubmit={handlePasswordReset} isLoading={isLoading} />
