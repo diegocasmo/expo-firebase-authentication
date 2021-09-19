@@ -6,7 +6,7 @@ Follow along each step of the process in the blog post series:
 
 - [Part 1: Project Setup](https://dev.to/diegocasmo/email-and-password-based-authentication-with-expo-and-firebase-part-1-project-setup-3nno)
 - [Part 2: Sign up, Email Verification, and Sign Out](https://dev.to/diegocasmo/email-and-password-based-authentication-with-expo-and-firebase-part-2-sign-up-email-verification-and-sign-out-40j5)
-- Part 3: Sign In, Forgot Password, and Update Password (coming soon)
+- [Part 3: Sign In, Forgot Password, and Update Password](https://dev.to/diegocasmo/email-and-password-based-authentication-with-expo-and-firebase-part-3-sign-in-forgot-password-and-update-password-2agj)
 
 ## Installation
 
